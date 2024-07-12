@@ -1,0 +1,60 @@
+My colleague and I decided to create a simple rock, paper, and scissors python game. This project shows an understanding of common functions, variables, and syntax of Python scripting. This is by no means a representation of our super-deep complex programming vigor. This is just to show that we know how to read Python and be able to understand what the script is trying to do.
+
+The first step is to import a random library. Then we create a function using def. H and C represent the human and computer choices.
+
+If h==c then the result is a tie. The double equal signs compare the variables to each other. But if the human chooses rock and the computer chooses paper then the computer wins. This logic continues for the rest of the def function.
+
+We set a for loop to allow people to play the game 3 times using the statement "for i in range (3)".
+
+mychoice=input("choose rock paper or scissor: ")
+
+This creates a variable called mychoice and tells the human to input one of the choices listed.
+
+ validchoice=["rock", "paper", "scissor"]
+
+This creates a variable called validchoice and it gives a list of valid choices to input into the script.
+
+ if mychoice not in validchoice:
+ print ("Not Valid")
+
+So this makes sure that the person running the script is entering a logical option and not something random. If another choice is entered that is not specified in the validchoice variable, then "Not Valid" will be printed on the screen.
+
+else:
+ compchoice=random.choice(validchoice)
+ print("computer choice: ",compchoice)
+ result(mychoice,compchoice)
+
+The first line tells the computer to make a random choice of rock, paper, or scissors that was set in the validchoice variable.  Then the computer's choice is printed on the screen and then it displays the result of the comparison of the human's choice and its choice.
+
+
+
+
+import random 
+
+def result(h,c):
+    if h==c:
+        print("tie")
+    elif h== "rock":
+        if c=="paper":
+            print("you lose")
+        else:
+            print("you win")
+    elif h=="paper":
+        if c=="rock":
+            print("you win")
+        else:
+            print("you lose")
+    else:
+        if c=="rock":
+            print("you win")
+        else:
+            print("you lose")
+for i in range (3):
+    mychoice=input("choose rock paper or scissor: ")
+    validchoice=["rock", "paper", "scissor"]
+    if mychoice not in validchoice:
+        print ("Not Valid")
+    else:
+        compchoice=random.choice(validchoice)
+        print("computer choice: ",compchoice)
+        result(mychoice,compchoice)
